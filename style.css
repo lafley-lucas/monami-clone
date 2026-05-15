@@ -1,0 +1,150 @@
+:root {
+  /*color*/
+  --grey-light-color: #D9D9D9;
+  --red-color: #EF3939;
+  --white-color: #fff;
+  --black-color: #140a00;
+  --grey-dark-color: #909090;
+  
+  /*size*/
+  --padding: 1.5em;
+  
+  /*font size*/
+  --font-large: 1.5em;
+  --font-medium: 1.13em;
+  --font-small: 1em;
+  --font-micro: 0.8em;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--padding);
+  margin: 0 1.5em;
+}
+
+.basicInfo {
+  display: flex;
+  margin-left: 9rem;
+}
+
+.social {
+  display: flex;
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+}
+
+.guide {
+  margin-right: 9rem;
+}
+
+.guide span {
+  margin-left: 1rem;  
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-medium);
+  padding: var(--padding);
+}
+
+nav img{
+  width: auto;
+  height: 2.5em;
+  margin-left: 9rem;
+}
+
+.navMenu {
+  display: flex;
+}
+
+.navMenu li {
+  margin-left: 3rem;
+}
+
+nav .icon {
+  display: flex;
+  margin-right: 9rem;
+}
+
+nav .icon li{
+  margin-left: 1rem;
+  font-size: var(--font-medium);
+}
+
+/* section intro*/
+.intro {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1571385761528-f924fe2a960d?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center center;
+}  
+
+.intro h1 {
+  color: var(--white-color);
+  margin-top: 5em;
+  margin-left: 7em;
+  margin-right: 35em;
+  
+}
+
+.intro .subComment {
+  color: var(--white-color);
+  padding: var(--padding);
+  margin-left: 12.5em;
+  margin-right: 65em;
+}
+
+.product {
+  display: grid;
+  padding: 0.7rem 7em;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 150px 200px 250px 90px;
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    'a b b'
+    'c b b'
+    'd e f'
+    'g e h'
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product .title {
+  grid-area: a;
+  display: flex;
+  flex-direction: column;
+}
+
+.img1 {
+  grid-area: b;
+}
+
+.img2 {
+  grid-area: c;
+}
