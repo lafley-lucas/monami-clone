@@ -54,14 +54,21 @@ ul {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   background-color: var(--white-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: var(--font-medium);
   padding: var(--padding);
+}
+
+header {
+  padding-top: 6em;
 }
 
 nav img{
@@ -147,4 +154,90 @@ nav .icon li{
 
 .img2 {
   grid-area: c;
+}
+
+/* ===== BEST PRODUCT ===== */
+.bestProduct {
+  padding: 5em 0;
+  background-color: var(--white-color);
+}
+
+.bestProduct__inner {
+  padding: 0 7em;
+}
+
+.bestProduct__heading {
+  font-size: var(--font-large);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.8em;
+  color: var(--black-color);
+}
+
+/* Tab Menu */
+.bestProduct__tabs {
+  display: flex;
+  border-bottom: 1px solid var(--grey-light-color);
+  margin-bottom: 2.5em;
+}
+
+.bestProduct__tab {
+  padding: 0.7em 1.8em;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+  cursor: default;
+  position: relative;
+}
+
+.bestProduct__tab--active {
+  color: var(--black-color);
+  font-weight: 600;
+}
+
+.bestProduct__tab--active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--red-color);
+}
+
+/* Product Cards */
+.bestProduct__cards {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.bestProduct__card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bestProduct__imgBox {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--grey-light-color);
+  overflow: hidden;
+  margin-bottom: 0.9em;
+}
+
+.bestProduct__imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bestProduct__category {
+  font-size: var(--font-micro);
+  color: var(--grey-dark-color);
+  margin-bottom: 0.3em;
+}
+
+.bestProduct__name {
+  font-size: var(--font-small);
+  color: var(--black-color);
+  font-weight: 500;
 }
